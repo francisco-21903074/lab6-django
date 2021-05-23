@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'website/css/base.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <header class="jumbotron text-center">
+        <h1>Anime</h1>
+        <p>Anime é boa</p>
+        <nav>
+            <a href="{% url 'website:home' %}" class="btn btn-info"></a>
+            <a href="{% url 'website:about' %}" class="btn btn-info"></a>
+            <a href="{% url 'website:anime' %}" class="btn btn-info"></a>
+        </nav>
+    </header>
+    <article class="container">
+        <main class="col-sm-6">
+            {% block main %}
+            {% endblock main %}
+        </main>
+        <aside class="col-sm-6">
+            {% load static %}
+            <img src="{% static 'website/images/imagem.jpg' %}" alt="">
+        </aside>
+    </article>
+    <footer>
+        <p>Anime is love, anime is life.</p>
+    </footer>
+</body>
+</html>
